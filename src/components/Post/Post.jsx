@@ -32,6 +32,10 @@ function HandleNewCommentChange(Comment) {
     setNewCommentText(event.target.value);
 }
 
+function handleNewCommentInvalid() {
+    event.target.setCustomValdity('Esse campo é obrigatório');
+}
+
 function deleteComment(commentToDelet) {
     const commetsWithoutDeletedOne = comments.filter(comment => {
         return comment != commentToDelet;
@@ -76,9 +80,11 @@ function deleteComment(commentToDelet) {
                 placeholder='Deixe um Comentario'
                 value={newCommentText}
                 onChange={HandleNewCommentChange}
+                onInvalid={handleNewCommentInvalid}
+                required
                 />
                 <footer>
-                <button type='submit'>Publicar</button>
+                <button type='submit' disabled={newCommentText.length === 0}>Publicar</button>
                 </footer>
             </form>
             <div className={styles.CommentList}>
