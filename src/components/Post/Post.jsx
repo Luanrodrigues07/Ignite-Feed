@@ -32,8 +32,13 @@ function HandleNewCommentChange(Comment) {
     setNewCommentText(event.target.value);
 }
 
-function deleteComment() {
+function deleteComment(commentToDelet) {
+    const commetsWithoutDeletedOne = comments.filter(comment => {
+        return comment != commentToDelet;
 
+    })
+    // imutabilidade -> as coisas não sofrem mutação, nos criamos um novo espaço na memória.
+    setComments(commetsWithoutDeletedOne);
 }
 
     return (
