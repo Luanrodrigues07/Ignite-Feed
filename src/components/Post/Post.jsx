@@ -28,8 +28,12 @@ function handleCreateNewComment() {
 
 }
 
-function HandleNewCommentChange() {
+function HandleNewCommentChange(Comment) {
     setNewCommentText(event.target.value);
+}
+
+function deleteComment() {
+
 }
 
     return (
@@ -51,9 +55,9 @@ function HandleNewCommentChange() {
             <div className={styles.content}>
                 {content.map(line => {
                     if(line.type === 'paragraph'){
-                        return <p>{line.content}</p>
+                        return <p key={line.content}>{line.content}</p>
                     }else if (line.type === 'link'){
-                        return <p><a href='#'>{line.content}</a> </p>
+                        return <p key={line.content}><a href='#'>{line.content}</a> </p>
                     }
                 })}
                
@@ -74,7 +78,12 @@ function HandleNewCommentChange() {
             </form>
             <div className={styles.CommentList}>
                 {comments.map(comments => {
-                    return <Comment content={comments}/>
+                    return (
+                    <Comment 
+                    key={comments} 
+                    content={comments} 
+                    onDeleteComment={deleteComment}
+                />)
                 })}
             </div>
         </article>
