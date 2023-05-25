@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function Post({ author, publishedAt, content}) {
     const [comments, setComments] = useState([
-    'Post muito bacana em!'
+ 
     ])
 
     const [newCommentText, setNewCommentText] = useState('')
@@ -44,6 +44,9 @@ function deleteComment(commentToDelet) {
     // imutabilidade -> as coisas não sofrem mutação, nos criamos um novo espaço na memória.
     setComments(commetsWithoutDeletedOne);
 }
+
+const isNewCommentEmpty = newCommentText.length === 0;
+
 
     return (
         <article className={styles.post}>
@@ -83,8 +86,14 @@ function deleteComment(commentToDelet) {
                 onInvalid={handleNewCommentInvalid}
                 required
                 />
+
                 <footer>
-                <button type='submit' disabled={newCommentText.length === 0}>Publicar</button>
+                <button 
+                type='submit' 
+                disabled={isNewCommentEmpty}>
+                    Publicar
+                </button>
+
                 </footer>
             </form>
             <div className={styles.CommentList}>
@@ -95,6 +104,7 @@ function deleteComment(commentToDelet) {
                     content={comments} 
                     onDeleteComment={deleteComment}
                 />)
+                
                 })}
             </div>
         </article>

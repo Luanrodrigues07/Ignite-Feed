@@ -18,9 +18,9 @@ const post = [
       role: 'Web Developer'
     },
     content: [
-      { type: 'paragraph', content: 'Fala Pessoal!' },
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu Portifolio! é um que fiz no curso da Rocket!' },
-      { type: 'link', content: 'Luanrodrigues.me' },
+      { type: 'paragraph', content: 'Buenas Pessoal!' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto de estudos da RocketSeat!' },
+      { type: 'link', content: 'https://github.com/Luanrodrigues07' },
     ],
     publishedAt: new Date('2023-05-23 21:57:49')
     
@@ -33,9 +33,9 @@ const post = [
       role: 'FullStack Developer & Mobile Developer'
     },
     content: [
-      { type: 'paragraph', content: 'Fala Pessoal!' },
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu Portifolio! é um que fiz no curso da Rocket!' },
-      { type: 'link', content: 'Luanrodrigues.me' },
+      { type: 'paragraph', content: 'Fala Jovem!' },
+      { type: 'paragraph', content: 'Enviei agora no meu Github o meu Projeto de Node!' },
+      { type: 'link', content: 'https://github.com/GabrielMerigo' },
     ],
     publishedAt: new Date('2023-05-13 16:47:18')
     
@@ -49,8 +49,8 @@ const post = [
     },
     content: [
       { type: 'paragraph', content: 'Fala Pessoal!' },
-      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu Portifolio! é um que fiz no curso da Rocket!' },
-      { type: 'link', content: 'Luanrodrigues.me' },
+      { type: 'paragraph', content: 'Adicionei mais um porjeto ao meu portifólio! ' },
+      { type: 'link', content: 'https://joaovitorbrietzkelima.me' },
     ],
     publishedAt: new Date('2023-05-13 16:47:18')
     
