@@ -1,29 +1,26 @@
 import Avatar from '../Avatar/Avatar';
-import styles from './Sidebar.module.css'
+import styles from './Login.module.css'
 import { PencilLine } from 'phosphor-react'
+import libertalogo from '../images/libertalogo.png'
 
 function Sidebar() {
     return(
-        <aside className={styles.sidebar}>
-            <img 
-            className={styles.cover} 
-            src='https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=50'
-            />
-
-            <div className={styles.profile}>
-               <Avatar src="https://avatars.githubusercontent.com/u/67129573?v=4"/>
-
-
-                <strong>Luan Rodrigues</strong>
-                <span>Web Developer</span>
-            </div>
+        <div className={styles.login}>
             <footer>
-                <a href='#'>
-                    <PencilLine size={20}/>
-                    Editar seu Perfil
-                </a>
+                <img src={libertalogo}/>
+                <strong>bem-vindo(a) ao Head Control!</strong>
+                <div className={styles.pageon}>
+                <label>Email</label>
+                <input type='text' placeholder='Email@liberta.com.vc'/>
+            </div>
+
+                <div className={styles.pageon}>
+                <label>Senha</label>
+                <input type='password'/>
+            </div>
+                <button href="#" >Login</button>
             </footer>
-        </aside>
+        </div>
     )
 }
 
